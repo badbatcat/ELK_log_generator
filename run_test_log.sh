@@ -9,7 +9,7 @@ echo "Starting containers"
 docker-compose up --build -d --remove-orphans
 
 echo "Waiting start 60 sec"
-  sleep 10
+  sleep 60
 #2. Запускаем 50 запросов к приложению
 echo "Running 100 requests  (10 sec)"
 for i in {1..100}; do curl http://localhost:80 -m 1 --silent -I | grep HTTP >> curloutput.log; done
